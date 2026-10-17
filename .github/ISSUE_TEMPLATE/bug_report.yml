@@ -1,0 +1,35 @@
+name: Bug report / Bug 反馈
+description: Something doesn't work as expected. / 有地方不对劲。
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please do not include personal information or copyrighted video files.
+        请不要填写个人信息，也不要上传有版权争议的视频文件。
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform / 平台
+      options: ["iOS (TestFlight)", "iOS (App Store)", "macOS", "Not sure / 不确定"]
+    validations: { required: true }
+  - type: textarea
+    id: what
+    attributes:
+      label: What did you do, what you expected, what happened? / 你做了什么、期望什么、发生了什么？
+    validations: { required: true }
+  - type: input
+    id: versions
+    attributes:
+      label: OS and PuDance version / 系统与 PuDance 版本
+      placeholder: "iOS 18.2, PuDance 1.0.0"
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area / 功能区
+      options:
+        - Import / Pack
+        - Playback (slow / mirror / loop)
+        - Follow-along camera
+        - Other / 其他
